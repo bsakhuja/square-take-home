@@ -11,19 +11,78 @@ struct ContentView: View {
     @State private var employees: [Employee] = [Employee]()
     var body: some View {
         List(employees, id: \.uuid) { employee in
-            HStack {
-                AsyncImage(url: URL(string: employee.photoUrlSmall ?? ""))
-                VStack(alignment: .leading) {
+            VStack(alignment: .leading) {
+                HStack(alignment: .center) {
+                    AsyncImage(url: URL(string: employee.photoUrlSmall ?? "")) { phase in
+                        if let image = phase.image {
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 75.0, height: 75)
+                                .cornerRadius(75.0)
+                        } else if phase.error != nil {
+                            Image("silhouette")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 75.0, height: 75.0)
+                                .cornerRadius(75.0)
+                        } else {
+                            ProgressView()
+                        }
+                    }
+                    Spacer()
                     Text(employee.fullName)
                         .font(.headline)
-                    Text(employee.employeeType.stringValue)
+                }
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Team")
+                            .font(.caption)
+                        Spacer()
+                        Text(employee.team)
+                    }
+                    HStack {
+                        Text("Employee type")
+                            .font(.caption)
+                        Spacer()
+                        Text(employee.employeeType.asString())
+                    }
+                    HStack {
+                        Text("Email")
+                            .font(.caption)
+                        Spacer()
+                        Text(.init("[\(employee.emailAddress)](mailto://\(employee.emailAddress))"))
+                    }
+                    if let phone = employee.phoneNumber {
+                        HStack {
+                            Text("Phone")
+                                .font(.caption)
+                            Spacer()
+                            Text(.init("[\(phone)](tel://\(phone))"))
+                        }
+                        
+                    }
+                    if let biography = employee.biography {
+                        HStack(alignment: .top) {
+                            Text("Bio")
+                                .font(.caption)
+                            Spacer()
+                            Text(biography)
+                                .font(.subheadline)
+                                .multilineTextAlignment(.trailing)
+                        }
+                    }
+
                 }
             }
                     
         }.task {
             await loadData()
         }
-        .padding()
+        .refreshable {
+            await loadData()
+        }
+        .listStyle(.grouped)
     }
     
     func loadData() async {

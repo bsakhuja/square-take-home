@@ -32,7 +32,15 @@ extension Employee {
 }
 
 enum EmployeeType: String, Codable, CodingKey {
-    case FullTime = "FULL_TIME"
-    case PartTime = "PART_TIME"
-    case Contractor = "CONTRACTOR"
+    case fullTime = "FULL_TIME"
+    case partTime = "PART_TIME"
+    case contractor = "CONTRACTOR"
+    
+    func asString() -> String {
+        switch self {
+        case .fullTime: return "Full Time"
+        case .partTime: return "Part Time"
+        case .contractor: return "Contractor"
+        }
+    }
 }
