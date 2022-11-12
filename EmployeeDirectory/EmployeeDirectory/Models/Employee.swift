@@ -5,6 +5,7 @@
 //  Created by Brian Sakhuja on 11/10/22.
 //
 
+/// Employee
 struct Employee: Codable {
     let uuid: String
     let fullName: String
@@ -17,6 +18,8 @@ struct Employee: Codable {
     let employeeType: EmployeeType
 }
 
+// MARK: Coding Keys
+
 extension Employee {
     enum CodingKeys: String, CodingKey {
         case uuid
@@ -28,19 +31,5 @@ extension Employee {
         case photoUrlLarge = "photo_url_large"
         case team
         case employeeType = "employee_type"
-    }
-}
-
-enum EmployeeType: String, Codable, CodingKey {
-    case fullTime = "FULL_TIME"
-    case partTime = "PART_TIME"
-    case contractor = "CONTRACTOR"
-    
-    func asString() -> String {
-        switch self {
-        case .fullTime: return "Full Time"
-        case .partTime: return "Part Time"
-        case .contractor: return "Contractor"
-        }
     }
 }

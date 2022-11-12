@@ -3,4 +3,54 @@
    uuid = "0D663FF8-D352-4940-B063-BB34332277C4"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F84F967-3301-4FA0-A0BE-421AE78C32CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmployeeDirectory/Views/EmployeeList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6F84F967-3301-4FA0-A0BE-421AE78C32CF - 8c1cd6135c52199c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmployeeDirectory.EmployeeList.body.getter : some"
+                  moduleName = "EmployeeDirectory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/briansakhuja/Documents/Xcode%20Projects/Square%20Takehome%20Test/EmployeeDirectory/EmployeeDirectory/Views/EmployeeList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "6F84F967-3301-4FA0-A0BE-421AE78C32CF - 8c1cd6135c52199c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmployeeDirectory.EmployeeList.body.getter : some"
+                  moduleName = "EmployeeDirectory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/briansakhuja/Documents/Xcode%20Projects/Square%20Takehome%20Test/EmployeeDirectory/EmployeeDirectory/Views/EmployeeList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "908">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
