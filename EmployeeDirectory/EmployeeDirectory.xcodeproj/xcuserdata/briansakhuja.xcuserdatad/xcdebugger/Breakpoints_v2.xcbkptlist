@@ -7,47 +7,77 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6F84F967-3301-4FA0-A0BE-421AE78C32CF"
-            shouldBeEnabled = "Yes"
+            uuid = "42675020-38A8-430C-8151-E67D1F2CF0A4"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EmployeeDirectory/Views/EmployeeList.swift"
+            filePath = "EmployeeDirectory/Networking/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getEmployees()"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6F84F967-3301-4FA0-A0BE-421AE78C32CF - 8c1cd6135c52199c"
+                  uuid = "42675020-38A8-430C-8151-E67D1F2CF0A4 - e083ca65235e7444"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "EmployeeDirectory.EmployeeList.body.getter : some"
+                  symbolName = "(1) suspend resume partial function for EmployeeDirectory.NetworkManager.getEmployees() async -&gt; Swift.Optional&lt;Swift.Array&lt;EmployeeDirectory.Employee&gt;&gt;"
                   moduleName = "EmployeeDirectory"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/briansakhuja/Documents/Xcode%20Projects/Square%20Takehome%20Test/EmployeeDirectory/EmployeeDirectory/Views/EmployeeList.swift"
+                  urlString = "file:///Users/briansakhuja/Documents/Xcode%20Projects/Square%20Takehome%20Test/EmployeeDirectory/EmployeeDirectory/Networking/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "492">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "248">
                </Location>
                <Location
-                  uuid = "6F84F967-3301-4FA0-A0BE-421AE78C32CF - 8c1cd6135c52199c"
+                  uuid = "42675020-38A8-430C-8151-E67D1F2CF0A4 - 3c5c036512ad2d1e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "EmployeeDirectory.EmployeeList.body.getter : some"
+                  symbolName = "(2) await resume partial function for EmployeeDirectory.NetworkManager.getEmployees() async -&gt; Swift.Optional&lt;Swift.Array&lt;EmployeeDirectory.Employee&gt;&gt;"
                   moduleName = "EmployeeDirectory"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/briansakhuja/Documents/Xcode%20Projects/Square%20Takehome%20Test/EmployeeDirectory/EmployeeDirectory/Views/EmployeeList.swift"
+                  urlString = "file:///Users/briansakhuja/Documents/Xcode%20Projects/Square%20Takehome%20Test/EmployeeDirectory/EmployeeDirectory/Networking/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "908">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "42675020-38A8-430C-8151-E67D1F2CF0A4 - 2d2c2d1a8738a846"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for EmployeeDirectory.NetworkManager.getEmployees() async -&gt; Swift.Optional&lt;Swift.Array&lt;EmployeeDirectory.Employee&gt;&gt;"
+                  moduleName = "EmployeeDirectory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/briansakhuja/Documents/Xcode%20Projects/Square%20Takehome%20Test/EmployeeDirectory/EmployeeDirectory/Networking/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "42675020-38A8-430C-8151-E67D1F2CF0A4 - 531ebeaad5040e47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for EmployeeDirectory.NetworkManager.getEmployees() async -&gt; Swift.Optional&lt;Swift.Array&lt;EmployeeDirectory.Employee&gt;&gt;"
+                  moduleName = "EmployeeDirectory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/briansakhuja/Documents/Xcode%20Projects/Square%20Takehome%20Test/EmployeeDirectory/EmployeeDirectory/Networking/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "60">
                </Location>
             </Locations>
          </BreakpointContent>

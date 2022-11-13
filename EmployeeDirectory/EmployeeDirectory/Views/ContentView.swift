@@ -7,21 +7,27 @@
 
 import SwiftUI
 
+/// Content View
 struct ContentView: View {
-    @State private var employeeList: [Employee]?
     
+    // MARK: Private Properties
+    
+    @State private var employeeList: [Employee]?
     private let networkManager = NetworkManager()
+    
     var body: some View {
-        VStack {
-            EmployeeList(employeeList: employeeList)
-                .task {
-                    await refreshEmployees()
-                }
-                .refreshable {
-                    await refreshEmployees()
-                }
+        NavigationView {
+            VStack {
+                EmployeeList(employeeList: $employeeList)
+                    .task {
+                        await refreshEmployees()
+                    }
+                    .refreshable {
+                        await refreshEmployees()
+                    }
+                    .navigationTitle("Block Employees")
+            }
         }
-        
     }
 }
 
@@ -41,8 +47,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-// TODO: handle malformed data
-// TODO: handle empty response
-// TODO: write tests
-// TODO: fill out readme

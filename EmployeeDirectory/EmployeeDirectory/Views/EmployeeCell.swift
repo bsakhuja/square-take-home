@@ -13,7 +13,7 @@ struct EmployeeCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
-                AsyncImage(url: URL(string: employee.photoUrlSmall ?? "")) { phase in
+                CachedAsyncImage(url: URL(string: employee.photoUrlSmall ?? ""), urlCache: .imageCache) { phase in
                     if let image = phase.image {
                         image
                             .resizable()

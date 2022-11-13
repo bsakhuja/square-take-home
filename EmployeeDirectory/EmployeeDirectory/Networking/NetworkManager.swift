@@ -16,7 +16,7 @@ struct NetworkManager {
     /// Get Employees
     /// - Returns: A list of employees parsed from the JSON response
     func getEmployees() async -> [Employee]? {
-        guard let url = URL(string: endpointURL) else {
+        guard let url = URL(string: malformedURL) else {
             print("Invalid URL")
             return nil
         }

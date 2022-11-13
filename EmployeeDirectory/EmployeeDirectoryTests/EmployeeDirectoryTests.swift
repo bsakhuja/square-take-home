@@ -9,28 +9,54 @@ import XCTest
 @testable import EmployeeDirectory
 
 final class EmployeeDirectoryTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    /// Test Valid Employees List
+    /// For now, naïvely assume that a valid employees list can be parsed to a non-empty Employees list (e.g. employeeList is not empty)
+    func testValidEmployeesList() throws {
+        do {
+            let employeesData = try getData(fromJSON: MockData.employees.rawValue)
+            let employeesParsed = try JSONDecoder().decode(EmployeeResponse.self, from: employeesData)
+            let employeeList = employeesParsed.employees
+            
+            XCTAssertNotNil(employeeList)
+            guard let employeeList = employeeList else {
+                throw UnitTestError.employeeListNil
+            }
+            
+            XCTAssert(!employeeList.isEmpty)
+        } catch {
+            throw error
         }
     }
-
+    
+    /// Test Empty Employees List
+    /// An empty employees list should be parsed to an empty list (e.g. '[Employees]()')
+    func testEmptyEmployeesList() throws {
+        do {
+            let emptyEmployeesData = try getData(fromJSON: MockData.empty.rawValue)
+            let emptyEmployeesParsed = try JSONDecoder().decode(EmployeeResponse.self, from: emptyEmployeesData)
+            let employeeList = emptyEmployeesParsed.employees
+            
+            XCTAssertNotNil(employeeList)
+            guard let employeeList = employeeList else {
+                throw UnitTestError.employeeListNil
+            }
+            
+            XCTAssert(employeeList.isEmpty)
+        } catch {
+            throw error
+        }
+        
+    }
+    
+    /// Test Malformed Employees List
+    /// Trying to parse a malformed employees list should throw an error
+    func testMalformedEmployeesList() throws {
+        do {
+            let malformedEmployeesData = try getData(fromJSON: MockData.malformed.rawValue)
+            XCTAssertThrowsError(try JSONDecoder().decode(EmployeeResponse.self, from: malformedEmployeesData))
+        } catch {
+            throw error
+        }
+    }
 }
