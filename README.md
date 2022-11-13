@@ -1,6 +1,6 @@
 ## Build tools & versions used
-Xcode 14.0 (14A309)
-Built and tested on iOS 16 simulator on M2 Macbook Air (2022) running macOS Ventura 13.0
+* Xcode 14.0 (14A309)
+* Built and tested on iOS 16 simulator on M2 Macbook Air (2022) running macOS Ventura 13.0
 
 ## Steps to run the app
 1. Download the code or clone the repository to your machine.
@@ -24,10 +24,14 @@ guard let url = URL(string: malformedURL) else {
         }
 ```
 ## What areas of the app did you focus on?
-I spent the bulk of my time trying to make the UI modular extracting code out to their own files like `EmployeeList` and `EmployeeCell`.
+I spent a good amount of my time trying to make the UI modular extracting code out to their own files like `EmployeeList` and `EmployeeCell`.
+
+I also dedicated some time to adding comments throughout the code.
 
 ## What was the reason for your focus? What problems were you trying to solve?
-I didn't want `ContentView` to be cluttered. I wanted it to be clear to the reader what exactly was hapening.
+For the UI modularization, I didn't want `ContentView` to be cluttered. I wanted it to be clear to the reader what exactly was hapening.
+
+For commenting, I had a similar objective with the UI modularization. I wanted anyone who looked at the code to have an easy time making sense of it.
 
 ## How long did you spend on this project?
 Broke this project into multiple parts over the course of a couple days. The breakdown was as follows:
@@ -44,9 +48,10 @@ I also would have spent more time handling error/empty states better. The app as
 
 Additionally, I would have spent more time on the networking layer. Specifically, I would have introduced more separation of concerns and made the `NetworkingManager` more "dumb" by creating a generic `getData(from URL)` function. This would remove specific "employee" logic from the Networking layer. I would have put the call to the networking layer in an `EmployeeListManager`, for example.
 
-I would have also added some kind of loading indicator when the network request was still in progress. Currently, there's no indication to the user that the device is fetching data.
+I would have also added some kind of loading indicator when network requests are in progress. Currently, there's no indication to the user when the device is fetching data.
 
 ## What do you think is the weakest part of your project?
+I think the networking layer could use some polishing.
 
 ## Did you copy any code or dependencies? Please make sure to attribute them here!
 * [CachedAsyncImage](https://github.com/lorenzofiamingo/swiftui-cached-async-image). Uses SwiftUI's AsyncImage API under the hood with some additional caching capabilities, which made it useful for this project.
