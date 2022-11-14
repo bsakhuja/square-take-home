@@ -58,3 +58,6 @@ I think the networking layer could use some polishing.
 
 ## Is there any other information you’d like us to know?
 I used SwiftUI in this app. I don't normally use it in my day-to-day but this was a fun exercise.
+
+## Screenshots
+<img width="510" alt="Screenshot 2022-11-13 at 7 44 02 PM" src="https://user-images.githubusercontent.com/18143590/201570869-021b2b1a-6a8a-462b-8f56-24f173c6521b.png">
